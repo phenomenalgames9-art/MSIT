@@ -1,0 +1,50 @@
+/* General image styling */
+img:is([sizes="auto" i], [sizes^="auto," i]) { 
+    contain-intrinsic-size: 3000px 1500px 
+}
+
+/* WordPress Emoji Styles */
+img.wp-smiley, img.emoji {
+    display: inline !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 0.07em !important;
+    vertical-align: -0.1em !important;
+    background: none !important;
+    padding: 0 !important;
+}
+
+/* Carousel Block Styles */
+.wp-block-cb-carousel-v2 { position: relative }
+/* ... (many more styles for carousels, fonts, and global settings) ... */
+
+/* Hiding default theme header/footer */
+.msitft-hides-theme-footer .site-footer { 
+    display:none !important; 
+}
+.msithd-hides-theme-header .site-header { 
+    display: none !important; 
+}
+
+/* Elementor Lazy Load Styles */
+.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+    background-image: none !important;
+}
+
+/* Profile Page Custom Styles */
+.dcms-profile-wrapper {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f5fa;
+}
+.dcms-profile-header {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+/* ... (and many more specific styles for profile sections) ... */
