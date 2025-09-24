@@ -1,17 +1,16 @@
-// WordPress Emoji Settings and Detection Script
-window._wpemojiSettings = {
-    "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/",
-    "ext": ".png",
-    "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/",
-    "svgExt": ".svg",
-    "source": {
-        "concatemoji": "https:\/\/msit.edu.in\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.2"
-    }
-};
+// Wait for the entire page to load before running the script
+document.addEventListener('DOMContentLoaded', () => {
 
-/*! This file is auto-generated */
-! function(s, n) {
-    var o, i, e;
-    function c(e) { /* ... (complex emoji detection logic) ... */ }
-    // ... (the rest of the long, self-executing function) ...
-}((window, document), window._wpemojiSettings);
+    // Select all elements with the class 'grid-item'
+    const gridItems = document.querySelectorAll('.grid-item');
+
+    // Loop through each grid item
+    gridItems.forEach((item, index) => {
+        // Use setTimeout to add the 'visible' class after a delay.
+        // The delay increases for each item (index * 150ms), creating a stagger effect.
+        setTimeout(() => {
+            item.classList.add('visible');
+        }, index * 150); 
+    });
+
+});
